@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* container layout css */
+.layout-container {
+    @apply w-screen h-screen m-auto flex justify-center align-middle flex-col bg-light-gray
+}
+
+.flex-container {
+    @apply flex gap-2 justify-center align-middle
+}
+
+/* common padding css */
+.pyx2-4 {
+    @apply py-2 px-4
+}
+
+/* list css */
+.todo-list {
+    @apply  h-60 overflow-y-scroll
+}
+
+.todo-item {
+    @apply py-2 px-8 rounded-lg border-slate-300 bg-white
+}
+
+/* handler css */
+.input {
+    @apply font-sans pyx2-4 rounded-lg border-slate-300 rounded-md text-sm shadow-lg placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-black
+}
+
+.btn {
+    @apply font-sans pyx2-4 font-semibold text-white rounded-lg shadow-lg bg-gray-800 hover:bg-gray-500
+}

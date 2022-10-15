@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { TodoItemType } from "../../types/todoType";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/layout/Layout";
 import TodoItem from "../../components/TodoItem";
 import InputTodo from "../../components/InputTodo";
 
@@ -14,7 +14,7 @@ const TODO: FC = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="todo-list">
         {list.map((item, index) => {
           return (
             <TodoItem key={index} title={item.title} content={item.content} />

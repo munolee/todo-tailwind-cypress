@@ -3,9 +3,9 @@ import { TodoItemType } from "../types/todoType";
 
 const TodoItem: FC<TodoItemType> = ({ title, content }) => {
   return (
-    <div style={{ display: "flex", gap: "12px" }}>
-      <div>{title}</div>
-      <div>{content}</div>
+    <div className="flex-container w-full mt-2">
+      <div className="todo-item">{title}</div>
+      <div className="todo-item text-gray-500">{content}</div>
     </div>
   );
 };
