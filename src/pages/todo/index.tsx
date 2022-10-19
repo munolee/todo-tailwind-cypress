@@ -17,6 +17,13 @@ const TODO: FC = () => {
     setList(_list);
   };
 
+  const completeTodo = (index: number) => {
+    console.log(index);
+    const _list = [...list];
+    _list[index] = { ..._list[index], status: "complete" };
+    setList(_list);
+  };
+
   return (
     <div className="layout-container">
       <div className="todo-list">
@@ -26,7 +33,9 @@ const TODO: FC = () => {
               key={index}
               title={item.title}
               content={item.content}
+              status={item.status}
               onDelete={() => deleteTodo(index)}
+              onComplete={() => completeTodo(index)}
             />
           );
         })}

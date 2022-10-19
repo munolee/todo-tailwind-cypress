@@ -7,7 +7,7 @@ const InputTodo: FC<InputTodoType> = ({ setTodo }) => {
   const contentInputRef = useRef<HTMLInputElement>(null);
 
   const submitItem = () => {
-    setTodo({ title, content });
+    setTodo({ title, content, status: "complete" });
     setTitle("");
     setContent("");
   };
