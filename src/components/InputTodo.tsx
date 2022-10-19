@@ -7,7 +7,7 @@ const InputTodo: FC<InputTodoType> = ({ setTodo }) => {
   const contentInputRef = useRef<HTMLInputElement>(null);
 
   const submitItem = () => {
-    setTodo({ title, content, status: "complete" });
+    setTodo({ title, content, status: "progress" });
     setTitle("");
     setContent("");
   };
@@ -15,6 +15,7 @@ const InputTodo: FC<InputTodoType> = ({ setTodo }) => {
   return (
     <div className="flex-container mt-14">
       <input
+        id="input-title"
         type="text"
         className="input"
         placeholder="할 일을 입력해주세요."
@@ -23,6 +24,7 @@ const InputTodo: FC<InputTodoType> = ({ setTodo }) => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
+        id="input-content"
         type="text"
         className="input"
         ref={contentInputRef}
@@ -31,7 +33,12 @@ const InputTodo: FC<InputTodoType> = ({ setTodo }) => {
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-      <button type="button" className="btn" onClick={submitItem}>
+      <button
+        id="button-add"
+        type="button"
+        className="btn"
+        onClick={submitItem}
+      >
         추가
       </button>
     </div>
